@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RB BEATS</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <img src="images/logo.png" alt="RB BEATS Logo" class="logo">
+      <h1>RB BEATS</h1>
+    </div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#beats">Beats</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <h2>High Quality Beats</h2>
+    <p>Exclusive and Non-Exclusive Licenses for Artists Worldwide</p>
+    <a href="#beats" class="btn">Browse Beats</a>
+    <a href="https://www.youtube.com/channel/UCC1C5AvSsxzwBdqks_6o9RQ" class="btn" target="_blank">Watch My Channel</a>
+    <a href="https://wa.me/265990211267" class="btn" target="_blank">Message Me on WhatsApp</a>
+  </section>
+
+  <!-- BEATS SECTION -->
+  <section id="beats">
+    <h2>Available Beats</h2>
+    <div class="beat-list">
+      <!-- Original Beats -->
+      <div class="beat-card">
+        <img src="images/beat1.jpg" alt="Cover art for Afrobeat Vibes">
+        <h3>Afrobeat Vibes</h3>
+        <audio controls>
+          <source src="beats/afrobeat.mp3" type="audio/mpeg">
+        </audio>
+        <button class="buy-btn" onclick="openPayment('Afrobeat Vibes', 50)">Buy Now</button>
+      </div>
+
+      <div class="beat-card">
+        <img src="images/beat2.jpg" alt="Cover art for Trap Energy">
+        <h3>Trap Energy</h3>
+        <audio controls>
+          <source src="beats/trap.mp3" type="audio/mpeg">
+        </audio>
+        <button class="buy-btn" onclick="openPayment('Trap Energy', 60)">Buy Now</button>
+      </div>
+
+      <div class="beat-card">
+        <img src="images/beat3.jpg" alt="Cover art for R&B Chill">
+        <h3>R&B Chill</h3>
+        <audio controls>
+          <source src="beats/rnb.mp3" type="audio/mpeg">
+        </audio>
+        <button class="buy-btn" onclick="openPayment('R&B Chill', 55)">Buy Now</button>
+      </div>
+
+      <!-- New Beats -->
+      <div class="beat-card">
+        <img src="images/beat4.jpg" alt="Cover art for AfroDancehall">
+        <h3>AfroDancehall</h3>
+        <audio controls>
+          <source src="beats/AfroDancehall.mp3" type="audio/mpeg">
+        </audio>
+        <button class="buy-btn" onclick="openPayment('AfroDancehall', 50)">Buy Now</button>
+      </div>
+
+      <div class="beat-card">
+        <img src="images/beat5.jpg" alt="Cover art for AfroDancehall Vibe">
+        <h3>AfroDancehall Vibe</h3>
+        <audio controls>
+          <source src="beats/AfroDancehallvibe.mp3" type="audio/mpeg">
+        </audio>
+        <button class="buy-btn" onclick="openPayment('AfroDancehall Vibe', 55)">Buy Now</button>
+      </div>
+
+      <div class="beat-card">
+        <img src="images/beat6.jpg" alt="Cover art for AfroDancehall Fire">
+        <h3>AfroDancehall Fire</h3>
+        <audio controls>
+          <source src="beats/AfroDancehallfire.mp3" type="audio/mpeg">
+        </audio>
+        <button class="buy-btn" onclick="openPayment('AfroDancehall Fire', 60)">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closePayment()">&times;</span>
+        <h3 id="modal-beat-name"></h3>
+        <p>Choose payment method:</p>
+        <button class="pay-method" onclick="payWithPayPal()">Pay with PayPal</button>
+        <button class="pay-method" onclick="payWithAirtel()">Pay with Airtel Money</button>
+        <button class="pay-method" onclick="payWithMpamba()">Pay with Mpamba</button>
+        <div id="airtel-instructions" class="instructions">
+          <strong>Airtel Money Instructions:</strong>
+          <p>Dial <b>*211#</b>, select "Send Money", enter <b>0990211267</b>, amount, and confirm.</p>
+        </div>
+        <div id="mpamba-instructions" class="instructions">
+          <strong>Mpamba Instructions:</strong>
+          <p>Dial <b>*444#</b>, select "Send Money", enter <b>0882687701</b>, amount, and confirm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm Robbison, a passionate beat producer from Malawi. I create Afrobeat, Trap, R&B and more for artists around the world. My mission is to help you find the perfect sound for your next hit.</p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>WhatsApp: <a href="https://wa.me/265990211267" target="_blank">Chat with me</a></p>
+    <p>YouTube: <a href="https://www.youtube.com/channel/UCC1C5AvSsxzwBdqks_6o9RQ" target="_blank">Watch my channel</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <small>&copy; <span id="year"></span> RB BEATS</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
